@@ -288,12 +288,12 @@ http_request        rb 4096  ; --- this is a buffer too
 http_request_len    dd ?
 
 file_name           db 'Readme.txt', 0
-server_name         db 'lala.requestcatcher.com', 0
+server_name         db 'example.com', 0 ;INPUT TARGET WEB SERVER HERE!
 
 
 header_template:
 db 'POST /test HTTP/1.1', 13, 10
-db 'Host: lala.requestcatcher.com', 13, 10
+db 'Host: example.com', 13, 10  ;HERE TOOOOOO
 db 'User-Agent: FASM-HTTP-Client/1.0', 13, 10
 db 'Content-Type: application/x-www-form-urlencoded', 13, 10
 db 'Content-Length: ', 0
